@@ -2,13 +2,14 @@ Several utility codes:
 - to get user's public data from Twitter API
 - to generate a graph for further visualization
 
-## Install
+## ติดตั้ง
 
-- Copy `config.ini-sample` to `config.ini` and enter Twitter tokens necessary for API access.
+- ทำสำเนาไฟล์ `config.ini-sample` และเปลี่ยนชื่อเป็น `config.ini`
+- ในไฟล์ `config.ini` ใส่ข้อมูล token สำหรับเข้าถึง Twitter API
   
-## Data
-Data files are here (private to project collaborators only) https://drive.google.com/drive/folders/1XQnJCc3xbTn6xFb-Vg4nJBtC-j1hC67c?usp=sharing
+## ข้อมูล
 
+ไฟล์ข้อมูลอยู่ใน Google Drive https://drive.google.com/drive/folders/1XQnJCc3xbTn6xFb-Vg4nJBtC-j1hC67c?usp=sharing (เฉพาะผู้ร่วมโครงการเท่านั้น)
 
 ## General steps
 
