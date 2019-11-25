@@ -11,7 +11,7 @@ Several utility codes:
 
 ไฟล์ข้อมูลอยู่ใน Google Drive https://drive.google.com/drive/folders/1XQnJCc3xbTn6xFb-Vg4nJBtC-j1hC67c?usp=sharing (เฉพาะผู้ร่วมโครงการเท่านั้น)
 
-## General steps
+## ขั้นตอนการเตรียมข้อมูล
 
 ### หารายการบัญชีตั้งต้นสำหรับผู้มีสิทธิ์เลือกตั้งครั้งแรก (first voters)
 
