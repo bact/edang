@@ -33,23 +33,26 @@ Several utility codes:
 
 4. หาว่าบัญชีผู้มีสิทธิ์เลือกตั้งครั้งแรก ติดตามใคร (friends/following)
    - ใช้โปรแกรม	`get-friends-info.ipynb`
+   - ข้อมูลที่ได้มาจะเป็น array ของ User object (Tweepy), ดูตัวอย่างได้จากไฟล์ Pickle - [samples-friends-120nodes.pkl](https://drive.google.com/file/d/1iWd2TrUq3HNhABEprME5Z7vQzIlZgpk6/view?usp=sharing)
 5. หาว่าบัญชีผู้มีสิทธิ์เลือกตั้งครั้งแรก มีใครมาติดตาม (followers)
    - ใช้โปรแกรม `get-followers-info.ipynb`
+   - ข้อมูลที่ได้มาจะเป็น array ของ User object (Tweepy), ดูตัวอย่างได้จากไฟล์ Pickle - [samples-followers-118nodes.pkl](https://drive.google.com/file/d/1UO-me_ceU0zSenKIv11j8LM6eiIdIdxq/view?usp=sharing)
 
 หนึ่งบัญชีอาจไปติดตามบัญชีอื่นๆ หรือมีผู้มาติดตาม หลักร้อย พัน หรือหมื่นบัญชี ดังนั้นในขั้นนี้ จำนวนบัญชีจะขยายออกไปอย่างมาก
 
 เพื่อเป็นการจำกัดจำนวนข้อมูลในอยู่ในระดับที่จัดการได้ อาจทำการสุ่มบัญชีจากรายชื่อที่ได้จาก (3) อีกที เพื่อให้มีจำนวนน้อยลง
-- ดูบัญชีที่สุ่มขึ้นมา 116 บัญชี ได้ใน [Google Sheet](https://docs.google.com/spreadsheets/d/1bTCMhcB5Iju4RQUCz4mnhxsxhN3nOLsN6PZ133qIDuA/edit#gid=327442729) (export ออกมาเป็นไฟล์ [firstvoters-info-samples-116-with-labels.xlsx](https://drive.google.com/file/d/1HsmeDoTrJFEGx2rcrtS8DJQAz_WknYw-/view?usp=sharing))
+- ดูบัญชีที่สุ่มขึ้นมา 116 บัญชี ได้ใน [Google Sheet](https://docs.google.com/spreadsheets/d/1bTCMhcB5Iju4RQUCz4mnhxsxhN3nOLsN6PZ133qIDuA/edit#gid=327442729) (export เมื่อวันที่ 10 พ.ย. 2562 ออกมาเป็นไฟล์ [firstvoters-info-samples-116-with-labels.xlsx](https://drive.google.com/file/d/1HsmeDoTrJFEGx2rcrtS8DJQAz_WknYw-/view?usp=sharing))
 - จะใช้ 116 บัญชีนี้ เป็นขุดบัญชีตั้งต้น (seed) ในการหา friends และ followers ในขั้นที่ (4) และ (5)
 
 ### สร้างกราฟจากข้อมูลเครือข่าย
 
-6. รวมบัญชีที่ได้จาก (4) และ (5) เข้าด้วยกัน
+6. รวมบัญชีที่ได้จาก (4) และ (5) เข้าด้วยกันเป็นเครือข่ายเดียว
    - ใช้โปรแกรม `combine-nodes.ipynb`
 
 7. สร้างกราฟข้อมูลเครือข่ายที่เก็บมาได้จาก (4) และ (5) และได้รวมเข้าด้วยกันในขั้นตอนที่ (6) แล้ว
-	 - ใช้โปรแกรม `create-user-graph.ipynb`
+   - ใช้โปรแกรม `create-user-graph.ipynb`
    - จะได้ไฟล์นามสกุล `.graphml` ซึ่งสามารถนำไปเปิดในโปรแกรม [Gephi](https://gephi.org/) ได้
+   - ดูตัวอย่างไฟล์ที่ https://github.com/bact/edang/blob/master/samples.graphml 
 
 8. ข้อมูลเครือข่ายนี้ จะทำให้เราสามารถหาบัญชีที่น่าจะเป็น "แกนกลาง" หรือมีความสำคัญสำหรับเครือข่ายนี้ได้
    - มีวิธีหา "แกนกลาง" นี้ได้หลายวิธี วิธีหนึ่งคือ PageRank
