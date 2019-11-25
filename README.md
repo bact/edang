@@ -51,8 +51,8 @@ Several utility codes:
 
 7. สร้างกราฟข้อมูลเครือข่ายที่เก็บมาได้จาก (4) และ (5) และได้รวมเข้าด้วยกันในขั้นตอนที่ (6) แล้ว
    - ใช้โปรแกรม `create-user-graph.ipynb`
-   - จะได้ไฟล์นามสกุล `.graphml` ซึ่งสามารถนำไปเปิดในโปรแกรม [Gephi](https://gephi.org/) ได้
-   - ดูตัวอย่างไฟล์ที่ https://github.com/bact/edang/blob/master/samples.graphml 
+   - จะได้ผลลัพธ์เป็นไฟล์ GraphML (นามสกุล `.graphml`) ซึ่งสามารถนำไปเปิดในโปรแกรมเช่น [Gephi](https://gephi.org/) ได้
+   - ดูตัวอย่างไฟล์ GraphML (สร้างจาก seed จำนวน 96 บัญชี) ที่ https://github.com/bact/edang/blob/master/samples.graphml 
 
 8. ข้อมูลเครือข่ายนี้ จะทำให้เราสามารถหาบัญชีที่น่าจะเป็น "แกนกลาง" หรือมีความสำคัญสำหรับเครือข่ายนี้ได้
    - มีวิธีหา "แกนกลาง" นี้ได้หลายวิธี วิธีหนึ่งคือ PageRank
