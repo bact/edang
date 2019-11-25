@@ -43,7 +43,7 @@ Several utility codes:
 หนึ่งบัญชีอาจไปติดตามบัญชีอื่นๆ หรือมีผู้มาติดตาม หลักร้อย พัน หรือหมื่นบัญชี ดังนั้นในขั้นนี้ จำนวนบัญชีจะขยายออกไปอย่างมาก
 
 เพื่อเป็นการจำกัดจำนวนข้อมูลในอยู่ในระดับที่จัดการได้ อาจทำการสุ่มบัญชีจากรายชื่อที่ได้จาก (3) อีกที เพื่อให้มีจำนวนน้อยลง
-- ดูบัญชีที่สุ่มขึ้นมา 116 บัญชี ได้ใน [Google Sheet](https://docs.google.com/spreadsheets/d/1bTCMhcB5Iju4RQUCz4mnhxsxhN3nOLsN6PZ133qIDuA/edit#gid=327442729) (export เมื่อวันที่ 10 พ.ย. 2562 ออกมาเป็นไฟล์ [firstvoters-info-samples-116-with-labels.xlsx](https://drive.google.com/file/d/1HsmeDoTrJFEGx2rcrtS8DJQAz_WknYw-/view?usp=sharing))
+- ดูบัญชีที่สุ่มขึ้นมา 116 บัญชี ได้ใน [Google Sheet](https://docs.google.com/spreadsheets/d/1bTCMhcB5Iju4RQUCz4mnhxsxhN3nOLsN6PZ133qIDuA/edit?usp=sharing) (export เมื่อวันที่ 10 พ.ย. 2562 ออกมาเป็นไฟล์ [firstvoters-info-samples-116-with-labels.xlsx](https://drive.google.com/file/d/1HsmeDoTrJFEGx2rcrtS8DJQAz_WknYw-/view?usp=sharing))
 - จะใช้ 116 บัญชีนี้ เป็นขุดบัญชีตั้งต้น (seed) ในการหา friends และ followers ในขั้นที่ (4) และ (5)
 
 ### สร้างกราฟจากข้อมูลเครือข่าย
