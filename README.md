@@ -8,6 +8,7 @@ Several utility codes:
 
 - ทำสำเนาไฟล์ `config.ini-sample` และเปลี่ยนชื่อเป็น `config.ini`
 - ในไฟล์ `config.ini` ใส่ข้อมูล token สำหรับเข้าถึง Twitter API
+- ดูวิธีการขอ/ดู token ที่ [Twitter Developers](https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens)
   
 ## ข้อมูล
 

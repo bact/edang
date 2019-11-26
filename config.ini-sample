@@ -1,3 +1,6 @@
+# See Twitter Developers page on Access Tokens for how to get keys
+# https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens
+
 [TWITTER_AUTH]
 CONSUMER_KEY =
 CONSUMER_SECRET =
