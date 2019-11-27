@@ -21,14 +21,18 @@ Several utility codes:
 1. ใช้คำสำคัญที่น่าจะช่วยให้ระบุถึงผู้มีสิทธิ์เลือกตั้งครั้งแรก (เช่นแฮชแท็ก #เลือกตั้งครั้งแรก) ค้นหาข้อความในทวิตเตอร์ เพื่อให้ได้ชุดบัญชีตั้งต้น ที่น่าจะเป็นผู้มีสิทธิ์เลือกตั้งครั้งแรก
    - ขั้นตอนนี้ ใช้เครื่องมือ social media listening (Wisesight ZOCIAL EYE) ในการค้นหา สำหรับคำค้นนั้น ปรับแต่งด้วยมนุษย์
    - ได้มาประมาณ 8,000 บัญชี
-   - อยู่ในไฟล์ [firstvoters-raw.xlsx](https://drive.google.com/file/d/1gctblwJsnsnvLT-IEPqUKlWn1wvQnzc5/view?usp=sharing)
+   - อยู่ในไฟล์ [firstvoters-full-raw.xlsx](https://drive.google.com/file/d/1DO5hdhSNjP-zNpXg4HSkCT64sSHY6pcH/view?usp=sharing)
 
 2. นำรายชื่อบัญชีจาก (1) มาดึงข้อมูลเกี่ยวกับบัญชีนั้นๆ (มี follower กี่คน, following กี่คน, เริ่มเปิดบัญชีวันไหน, โพสต์มาแล้วกี่ข้อความ ฯลฯ)
    - ใช้โปรแกรม `get-users-info.ipynb`
 
 3. กรองผู้ใช้ที่ไม่น่าจะใช่ผู้มีสิทธิ์เลือกตั้งครั้งแรกออกไป ทั้งการดูด้วยตาสำหรับบัญชีที่เห็นได้ชัด เช่น สำนักข่าว ดารา และการกรองด้วยเกณฑ์ เช่น ถ้าสมัครบัญชีทวิตเตอร์มาแล้วเกิน 12 ปี ก็ "น่าจะ" มีอายุเกิน 25 ปี (ทวิตเตอร์กำหนดให้สมัครบัญชีได้เมื่ออายุ 13 ปี) เป็นต้น   
    - กรองแล้วเหลือประมาณ 6,000 บัญชี
-   - รายชื่อที่กรอง/จัดประเภทแล้ว อยู่ในไฟล์ [firstvoters-info-full.xlsx](https://drive.google.com/file/d/1ugUev3_Gefz3xk8V0m4-SqkX397rLQOo/view?usp=sharing)
+   - รายชื่อที่กรอง/จัดประเภทแล้ว อยู่ในไฟล์ [firstvoters-full-info.xlsx](https://drive.google.com/file/d/1qwJaB5nIdggT2I6SdQxy5sudbn5yj85F/view?usp=sharing)
+
+เพื่อเป็นการจำกัดจำนวนข้อมูลในอยู่ในระดับที่จัดการได้ จึงทำการสุ่มบัญชีจากรายชื่อที่ได้จาก (3) อีกที เพื่อให้มีจำนวนน้อยลง
+- ดูบัญชีที่สุ่มขึ้นมา 116 บัญชี ได้ใน [Google Sheet](https://docs.google.com/spreadsheets/d/1bTCMhcB5Iju4RQUCz4mnhxsxhN3nOLsN6PZ133qIDuA/edit?usp=sharing) (export เมื่อวันที่ 10 พ.ย. 2562 ออกมาเป็นไฟล์ [samples116-info-with-labels.xlsx](https://drive.google.com/file/d/1BEznhsNE26vNlL4s1f04xG6exujzHtW5/view?usp=sharing))
+- จะใช้ 116 บัญชีนี้ เป็นขุดบัญชีตั้งต้น (seed) ในการหา friends และ followers ในขั้นที่ (4) และ (5)
 
 ### เก็บข้อมูลเครือข่ายของผู้มีสิทธิ์เลือกตั้งครั้งแรก
 
@@ -36,37 +40,31 @@ Several utility codes:
 
 4. หาว่าบัญชีผู้มีสิทธิ์เลือกตั้งครั้งแรก ติดตามใคร (friends/following)
    - ใช้โปรแกรม	`get-friends-info.ipynb`
-   - ข้อมูลที่ได้มาจะเป็น array ของ User object (Tweepy), ดูตัวอย่างได้จากไฟล์ Pickle - [samples-friends-120nodes.pkl](https://drive.google.com/file/d/1iWd2TrUq3HNhABEprME5Z7vQzIlZgpk6/view?usp=sharing)
+   - ข้อมูลที่ได้มาจะเป็น array ของ User object (Tweepy), ดูตัวอย่างได้จากไฟล์ Pickle - [samples116-friends.pkl](https://drive.google.com/file/d/1ZN3tBx5jyHoTM4Bmb6IO2RlpvHBgsPk7/view?usp=sharing)
+
 5. หาว่าบัญชีผู้มีสิทธิ์เลือกตั้งครั้งแรก มีใครมาติดตาม (followers)
    - ใช้โปรแกรม `get-followers-info.ipynb`
-   - ข้อมูลที่ได้มาจะเป็น array ของ User object (Tweepy), ดูตัวอย่างได้จากไฟล์ Pickle - [samples-followers-118nodes.pkl](https://drive.google.com/file/d/1UO-me_ceU0zSenKIv11j8LM6eiIdIdxq/view?usp=sharing)
+   - ข้อมูลที่ได้มาจะเป็น array ของ User object (Tweepy), ดูตัวอย่างได้จากไฟล์ Pickle - [samples116-followers.pkl](https://drive.google.com/file/d/1oth3lTlInj--eUtPlhS0hI3DNjwu4s0o/view?usp=sharing)
 
-หนึ่งบัญชีอาจไปติดตามบัญชีอื่นๆ หรือมีผู้มาติดตาม หลักร้อย พัน หรือหมื่นบัญชี ดังนั้นในขั้นนี้ จำนวนบัญชีจะขยายออกไปอย่างมาก
-
-เพื่อเป็นการจำกัดจำนวนข้อมูลในอยู่ในระดับที่จัดการได้ อาจทำการสุ่มบัญชีจากรายชื่อที่ได้จาก (3) อีกที เพื่อให้มีจำนวนน้อยลง
-- ดูบัญชีที่สุ่มขึ้นมา 116 บัญชี ได้ใน [Google Sheet](https://docs.google.com/spreadsheets/d/1bTCMhcB5Iju4RQUCz4mnhxsxhN3nOLsN6PZ133qIDuA/edit?usp=sharing) (export เมื่อวันที่ 10 พ.ย. 2562 ออกมาเป็นไฟล์ [firstvoters-info-samples-116-with-labels.xlsx](https://drive.google.com/file/d/1HsmeDoTrJFEGx2rcrtS8DJQAz_WknYw-/view?usp=sharing))
-- จะใช้ 116 บัญชีนี้ เป็นขุดบัญชีตั้งต้น (seed) ในการหา friends และ followers ในขั้นที่ (4) และ (5)
+หนึ่งบัญชีอาจไปติดตามบัญชีอื่นๆ หรือมีผู้มาติดตาม หลักร้อย พัน หรือหมื่นบัญชี ดังนั้นในสองขั้นนี้ จำนวนบัญชีจะขยายออกไปอย่างมาก
 
 ### สร้างกราฟจากข้อมูลเครือข่าย
 
-6. รวมบัญชีที่ได้จาก (4) และ (5) เข้าด้วยกันเป็นเครือข่ายเดียว
-   - ใช้โปรแกรม `combine-nodes.ipynb`
-
-7. สร้างกราฟข้อมูลเครือข่ายที่เก็บมาได้จาก (4) และ (5) และได้รวมเข้าด้วยกันในขั้นตอนที่ (6) แล้ว
+6. สร้างกราฟข้อมูลเครือข่ายที่เก็บมาได้จาก (4) และ (5)
    - ใช้โปรแกรม `create-user-graph.ipynb`
    - จะได้ผลลัพธ์เป็นไฟล์ GraphML (นามสกุล `.graphml`) ซึ่งสามารถนำไปเปิดในโปรแกรมเช่น [Gephi](https://gephi.org/) ได้
    - ดูตัวอย่างไฟล์ GraphML (สร้างจาก seed จำนวน 96 บัญชี) ที่ https://github.com/bact/edang/blob/master/samples.graphml 
 
-8. ข้อมูลเครือข่ายนี้ จะทำให้เราสามารถหาบัญชีที่น่าจะเป็น "แกนกลาง" หรือมีความสำคัญสำหรับเครือข่ายนี้ได้
+7. ข้อมูลเครือข่ายนี้ จะทำให้เราสามารถหาบัญชีที่น่าจะเป็น "แกนกลาง" หรือมีความสำคัญสำหรับเครือข่ายนี้ได้
    - มีวิธีหา "แกนกลาง" นี้ได้หลายวิธี วิธีหนึ่งคือ PageRank
    - การหาแกนกลางนี้ จะช่วยลดจำนวนบัญชีที่จำเป็นต้องติดป้ายกำกับ เช่น แทนที่จะต้องติดป้ายกำกับกับบัญชีทุกบัญชี (ซึ่งอาจมีเป็นหมื่นบัญชี) เราอาจติดป้ายกำกับเฉพาะบัญชีที่อยู่ 1,000 อันดับแรกของ PageRank 
 
 ### ดึงข้อความโพสต์จากบัญชีเพื่อติดป้ายกำกับและหาเครือข่ายผ่านการ Retweet และ @reply
 
-9. เพื่อให้สามารถติดป้ายกำกับได้เร็วขึ้น เราอาจดึงข้อความจำนวนมากด้วยคอมพิวเตอร์ ซึ่งอาจเลือกใช้วิธีเหล่านี้
+8. เพื่อให้สามารถติดป้ายกำกับได้เร็วขึ้น เราอาจดึงข้อความจำนวนมากด้วยคอมพิวเตอร์ ซึ่งอาจเลือกใช้วิธีเหล่านี้
    1. ดึงข้อความของบัญชีนั้นๆ จากเครื่องมือ social media listening
    2. ใช้โปรแกรม `get-users-msg-api.ipynb`
 
-10. การหาเครือข่ายผ่านการ Retweet
+9. การหาเครือข่ายผ่านการ Retweet
 
-11. การหาเครือข่ายผ่านการ @reply หรือ @mention
+1. การหาเครือข่ายผ่านการ @reply หรือ @mention
