@@ -1,3 +1,5 @@
+![Network of Twitter first voters (samples)](samples116-graph.png "Network of Twitter first voters (samples)")
+
 # EDANG
 
 Several utility codes:
