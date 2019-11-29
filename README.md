@@ -70,7 +70,7 @@ Several utility codes:
    1. ดึงข้อความของบัญชีนั้นๆ จากเครื่องมือ social media listening
    2. ใช้โปรแกรม `get-users-msg-api.ipynb`
      - ข้อความที่ดึงมาด้วย `get-users-msg-api.ipynb` จะถูกเก็บเป็นไฟล์ข้อความ 1 บัญชีทวิตเตอร์ต่อ 1 ไฟล์
-     - **ข้อความทวีตล่าสุด 1,200 ข้อความของบัญชี Top 1,2000 PageRank อยู่ในโฟลเดอร์ [samples116-pagerank-top1200](https://drive.google.com/drive/folders/1zlQw9MaOAcjTe6dDASKYhJ4gCTN9muG9?usp=sharing) ใน Google Drive**
+     - **ข้อความทวีตล่าสุด 1,200 ข้อความของบัญชี Top 1,2000 PageRank (ย้อนไปถึงวันที่ 1 ธ.ค. 2561) อยู่ในโฟลเดอร์ [samples116-pagerank-top1200](https://drive.google.com/drive/folders/1zlQw9MaOAcjTe6dDASKYhJ4gCTN9muG9?usp=sharing) ใน Google Drive**
 
 8. การหาเครือข่ายผ่านการ Retweet
 
