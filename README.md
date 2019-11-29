@@ -55,7 +55,8 @@ Several utility codes:
 
 6. สร้างกราฟข้อมูลเครือข่ายที่เก็บมาได้จาก (4) และ (5) และหา PageRank
    - ใช้โปรแกรม `create-user-graph.ipynb` เพื่อสร้างกราฟข้อมูลเครือข่าย
-     - ตัวอย่างกราฟข้อมูลเครือข่ายจากตัวอย่างบัญชีตั้งต้น 116 บัญชี: [samples116-graph.pkl](https://drive.google.com/file/d/1_my2K01lBAcFOVzmH_Vw9r-yfRrqbeYA/view?usp=sharing)
+     - ตัวอย่างกราฟข้อมูลเครือข่าย ซึ่งมีจำนวนบัญชี 75,961 บัญชี (จากตัวอย่างบัญชีตั้งต้น 116 บัญชี): [samples116-graph.pkl](https://drive.google.com/file/d/1_my2K01lBAcFOVzmH_Vw9r-yfRrqbeYA/view?usp=sharing)
+       - เก็บในรูปแบบ Pickle ของ Python. โครงสร้างข้อมูลเป็น dictionary ที่มี key เป็น screen name และ value เป็น Tweepy User object
    - จากกราฟนี้ เราสามารถหาบัญชีที่น่าจะเป็น "แกนกลาง" หรือมีความสำคัญสำหรับเครือข่ายนี้ได้ มีวิธีหา "แกนกลาง" นี้ได้หลายวิธี วิธีหนึ่งคือ PageRank
      - **ตัวอย่างบัญชี 1,200 อันดับแรกจาก PageRank เมื่อใช้ข้อมูลจากกราฟเครือข่ายบัญชีตั้งต้น 116 บัญชี: [samples116-pagerank-top1200.txt](https://drive.google.com/file/d/11DymC9z0lxPNNkhu9vvEwwbnNGA6Hocz/view?usp=sharing)**
       - การหาแกนกลางนี้ จะช่วยลดจำนวนบัญชีที่จำเป็นต้องติดป้ายกำกับ เช่น แทนที่จะต้องติดป้ายกำกับกับบัญชีทุกบัญชี (ซึ่งอาจมีเป็นหมื่นบัญชี) เราอาจติดป้ายกำกับเฉพาะบัญชีที่อยู่ 1,000 อันดับแรกของ PageRank
