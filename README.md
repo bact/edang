@@ -2,9 +2,17 @@
 
 # EDANG
 
-Several utility codes:
-- to get user's public data from Twitter API
-- to generate a GraphML file for visualization
+Data preparation scripts for a research project on echo chamber assumption among Thai-speaking Twitter users, focusing on first voters in [2019 Thai general election](https://en.wikipedia.org/wiki/2019_Thai_general_election).
+
+The data used in the research has two parts: textual data (tweets) and account relationship data (followings, followers).
+All of these are collected from public tweets several months before and after the election. 
+[Wisesight (Thailand) Co., Ltd.](https://wisesight.com/) provides the raw data according to the specification
+outlined by the research team led by [Prof. Pirongrong Ramasoota](https://www.research.chula.ac.th/asst-prof-dr-pirongrong-ramasoota/) at [Chulalongkorn University's Faculty of Communication Arts](https://www.chula.ac.th/en/academic/faculty-of-communication-arts/).
+The team itself consists of team members from many universities, including Chiang Mai University and Bangkok University.
+
+This repository includes scripts to:
+- get user's public data from Twitter API
+- generate a GraphML file for visualization
 
 ## ติดตั้ง
 
