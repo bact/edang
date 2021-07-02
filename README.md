@@ -4,6 +4,8 @@
 
 Data preparation scripts for a research project on echo chamber assumption among Thai-speaking Twitter users, focusing on first voters in [2019 Thai general election](https://en.wikipedia.org/wiki/2019_Thai_general_election).
 
+Part of a project funded by Thai Research Fund - "Online Echo Chamber" ([Project No.: RDG6240022](https://elibrary.trf.or.th/project_content.asp?PJID=RDG6240022) / 17 April 2019).
+
 The data used in the research has two parts: textual data (tweets) and account relationship data (followings, followers).
 All of these are collected from public tweets several months before and after the election. 
 [Wisesight (Thailand) Co., Ltd.](https://wisesight.com/) provides the raw data according to the specification
@@ -83,3 +85,9 @@ This repository includes scripts to:
 8. การหาเครือข่ายผ่านการ Retweet
 
 9. การหาเครือข่ายผ่านการ @reply หรือ @mention
+
+
+## ข่าวเกี่ยวกับโครงการ
+
+- (ข่าว) [รายงานผลการวิจัย “ห้องแห่งเสียงสะท้อนออนไลน์กับผู้ออกเสียงเลือกตั้งครั้งแรก ในการเลือกตั้งทั่วไป พ.ศ. 2562”](https://www.matichon.co.th/politics/news_2283678)
+- [รายงานวิจัยฉบับสมบูรณ์ (Full Paper)](https://elibrary.trf.or.th/project_content.asp?PJID=RDG6240022)
